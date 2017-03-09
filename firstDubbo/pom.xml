@@ -15,13 +15,50 @@
     </modules>
 
     <properties>
-        <springMvc.version>4.3.2.RELEASE</springMvc.version>
+        <springMvc.version>4.3.4.RELEASE</springMvc.version>
         <dubbo.version>2.5.3</dubbo.version>
         <servlet.version>7.0</servlet.version>
+        <druid.version>1.0.26</druid.version>
+        <mybatis_spring.version>1.3.0</mybatis_spring.version>
+        <mybatis.version>3.4.1</mybatis.version>
+        <aspectjweaver.version>1.8.9</aspectjweaver.version>
+        <mysql-connector.version>6.0.5</mysql-connector.version>
+        <jedis.version>2.9.0</jedis.version>
+
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis_spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.yjl.dubbo</groupId>
                 <artifactId>core</artifactId>
@@ -33,6 +70,7 @@
                 <artifactId>javaee-web-api</artifactId>
                 <version>${servlet.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
